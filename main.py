@@ -9,11 +9,11 @@ def getTrades():
     url = "https://streaming.bitquery.io/eap"
 
     payload = json.dumps({
-        "query": """query MyQuery {
+        "query": """subscription {
             Solana {
                 DEXTrades(
                     where: {
-                        Trade: {Buy: {Account: {Address: {is: "GFTZytvemcb5QamsHCvFRLX3cYwRoabvbk8Mynmg9gWF"}}}},
+                        Trade: {Buy: {Account: {Address: {is: "HH3BmVQoVsH2c5H3nonkw2ySGogyohBXGGgF7vM7MRdk"}}}},
                         Transaction: {Result: {Success: true}}
                     }
                 ) {
